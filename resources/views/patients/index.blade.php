@@ -6,11 +6,11 @@
         <div class="card-header border-0">
           <div class="row align-items-center">
             <div class="col">
-              <h3 class="mb-0">Funcionarios</h3>
+              <h3 class="mb-0">Ciudadanos</h3>
             </div>
             <div class="col text-right">
-              <a href="{{url('doctors/create') }}" class="btn btn-sm btn-default">
-                  Nueva funcionario
+              <a href="{{url('patients/create') }}" class="btn btn-sm btn-default">
+                  Nueva ciudadano
               </a>
             </div>
           </div>
@@ -34,22 +34,22 @@
               </tr>
             </thead>
             <tbody>
-                @foreach ($doctors as $doctor)
+                @foreach ($patients as $patient)
               <tr>
                 <th scope="row">
-                  {{$doctor->name}}
+                  {{$patient->name}}
                 </th>
                 <td>
-                {{$doctor->email}}
+                {{$patient->email}}
                 </td>
                 <td>
-                    {{$doctor->dni}}
+                    {{$patient->dni}}
                     </td>
                 <td>
-                 <form action="{{url('/doctors/'.$doctor->id) }}" method="POST">
+                 <form action="{{url('/patients/'.$patient->id) }}" method="POST">
                    @csrf
                    @method('DELETE')
-                   <a href="{{ url('/doctors/'.$doctor->id.'/edit') }}" class="btn btn-sm btn-primary">Editar</a>
+                   <a href="{{ url('/patients/'.$patient->id.'/edit') }}" class="btn btn-sm btn-primary">Editar</a>
                    <button class="btn btn-sm btn-danger" type="submit">Eliminar</button>
                  </form>
                 </td>
@@ -57,6 +57,9 @@
               @endforeach
             </tbody>
           </table>
+        </div>
+        <div class="card-body">
+          {{$patients->links()}}
         </div>
       </div>
     </div>
