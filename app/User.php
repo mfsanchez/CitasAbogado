@@ -6,6 +6,8 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+
+
 class User extends Authenticatable
 {
     use Notifiable;
@@ -16,7 +18,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name','email','dni','address','phone', 'role'
     ];
 
     /**
@@ -27,6 +29,15 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function scopePatients($query)
+    {
+        return $query->where('role','patient');
+    }
+    public function scopeDoctors($query)
+    {
+        return $query->where('role','doctor');
+    }
 
     /**
      * The attributes that should be cast to native types.

@@ -6,10 +6,10 @@
         <div class="card-header border-0">
           <div class="row align-items-center">
             <div class="col">
-              <h3 class="mb-0">Nueva funcionario</h3>
+              <h3 class="mb-0">Nueva ciudadano</h3>
             </div>
             <div class="col text-right">
-              <a href="{{url('/doctors') }}" class="btn btn-sm btn-default">
+              <a href="{{url('/patients') }}" class="btn btn-sm btn-default">
                   Cancelar y volver
               </a>
             </div>
@@ -26,10 +26,10 @@
             </div>
             @endif
 
-        <form action="{{ url('doctors') }}" method="post">
+        <form action="{{ url('patients') }}" method="post">
             @csrf
             <div class="form-group">
-                <label for="name">Nombre del funcionario</label>
+                <label for="name">Nombre del ciudadano</label>
                 <input type="text" name="name" class="form-control" value="{{old('name') }}" require>
             </div>
             <div class="form-group">
@@ -51,7 +51,7 @@
             <div class="form-group">
               <label for="password">Contraseña</label>
               <input type="text" name="password" class="form-control" value="{{ str_random(6) }}" >
-            </div>
+            </div>        
             <button type="submit" class="btn btn-primary">
                 Guardar
             </button>
