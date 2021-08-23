@@ -1,4 +1,7 @@
 @extends('layouts.panel')
+@section('styles')
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+@endsection
 @section('content')
   <div class="row mt-5">
     <div class="col-xl-8 mb-5 mb-xl-0">
@@ -54,6 +57,16 @@
               <input type="text" name="password" class="form-control" value="" >
               <p>Ingrese un valor sólo si desea modificar la contraseña</p>
           </div>
+          <div class="form-group">
+            <label for="specialties">Departamento</label>
+            <div class="from-group">
+              <select name="sepecialties" id="specialties" class="selectpicker" data-style="btn-outline-info" >
+                @foreach ($specialties as $specialty)
+                <option value="{{ $specialty->id }}">{{ $specialty->name }}</option>
+                @endforeach
+              </select>
+            </div>        
+          </div>
             <button type="submit" class="btn btn-primary">
                 Guardar
             </button>
@@ -63,4 +76,13 @@
     </div>
     </div>
   </div>
+@endsection
+@section('scripts')
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/i18n/defaults-*.min.js"></script>
+<script>
+  $(document).ready(() => {
+    $('#specialties').selectpicker('val',@jason($specialty_ids));
+  });
+</script>
 @endsection
