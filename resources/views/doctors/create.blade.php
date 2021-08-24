@@ -1,6 +1,7 @@
 @extends('layouts.panel')
 @section('styles')
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/
+css/bootstrap-select.min.css">
 @endsection
 @section('content')
   <div class="row mt-5">
@@ -58,7 +59,8 @@
             <div class="form-group">
               <label for="specialties">Departamento</label>
               <div class="form-group">
-                <select name="sepecialties" id="specialties"  class="form-groupselectpicker" data-style="btn-outline-info" >
+                <select name="sepecialties[]" id="specialties"  class="form-control selectpicker" data-style="btn-outline-secondary border border-light" multiple title="Seleccione
+                una o varios Departamentos" >
                   @foreach ($specialties as $specialty)
                   <option value="{{ $specialty->id }}">{{ $specialty->name }}</option>
                   @endforeach
@@ -76,6 +78,6 @@
   </div>
 @endsection
 @section('scripts')
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/i18n/defaults-*.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js">
+</script>
 @endsection

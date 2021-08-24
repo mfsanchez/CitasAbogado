@@ -14,7 +14,7 @@ class SpecialtiesTableSeeder extends Seeder
     {
         $specialties = [
             'Registro',
-            'Padro',
+            'Padron',
             'Certificado Digital',
             'Agobado',
             'Sip',

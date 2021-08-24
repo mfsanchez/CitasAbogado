@@ -30,10 +30,11 @@
             @csrf
             <div class="form-group">
                 <label for="name">Departamento</label>
-                <select name="" id="" class="form-control"></select>
+                <select name="" id="" class="form-control">
                 @foreach ($specialties as $specialty)
                 <option value="{{ $specialty->id }}">{{ $specialty->name }}</option>
                 @endforeach
+                </select>
             </div>
             <div class="form-group">
                 <label for="email">Funcionario</label>
@@ -41,7 +42,7 @@
             </div>
             <div class="form-group">
                 <label for="dni">Fecha</label>
-                <div class="input-group">
+                <div class="input-group input-group-alternative">
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
                     </div>

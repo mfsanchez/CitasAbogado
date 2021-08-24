@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\User;
-use App\Http\Controllers\Controller;
 use App\Specialty;
+
+use App\Http\Controllers\Controller;
+
 
 
 class DoctorController extends Controller
@@ -45,7 +47,7 @@ class DoctorController extends Controller
         $rules = [
             'name' => 'required|min:3',
             'email'=> 'required|email',
-            'dni' => '',
+            'dni' => 'nullable|digits:8',
             'address'=> 'nullable|min:5',
             'phone'=> 'nullable|min:6'
         ];
