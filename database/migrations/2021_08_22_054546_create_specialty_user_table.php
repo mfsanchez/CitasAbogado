@@ -14,7 +14,7 @@ class CreateSpecialtyUserTable extends Migration
     public function up()
     {
         Schema::create('specialty_user', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
 
             // doctor
             $table->unsignedInteger('user_id');

@@ -16,7 +16,6 @@ class CreateAppointmentsTable extends Migration
         Schema::create('appointments', function (Blueprint $table) {
             $table->increments('id');
 
-            
 
             $table->timestamps();
         });

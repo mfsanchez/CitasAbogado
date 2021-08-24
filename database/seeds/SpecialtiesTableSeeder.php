@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Specialty;
+use App\User;
 
 class SpecialtiesTableSeeder extends Seeder
 {
@@ -20,9 +21,9 @@ class SpecialtiesTableSeeder extends Seeder
             'Sip',
             'Adl'
         ];
-        foreach ($specialties as $specialty){
-            Specialty::create([
-                'name'=> $specialty
+       foreach ($specialties as $specialtyName) {
+            $specialty = Specialty::create([
+                'name' => $specialtyName
             ]);
         }
        
