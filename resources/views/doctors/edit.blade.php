@@ -1,4 +1,8 @@
 @extends('layouts.panel')
+@section('styles')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/
+css/bootstrap-select.min.css">
+@endsection
 @section('content')
   <div class="row mt-5">
     <div class="col-xl-8 mb-5 mb-xl-0">
@@ -54,6 +58,14 @@
               <input type="text" name="password" class="form-control" value="" >
               <p>Ingrese un valor sólo si desea modificar la contraseña</p>
           </div>
+          <div class="form-group">
+                <select name="sepecialties[]" id="specialties"  class="form-control selectpicker" data-style="btn-outline-secondary border border-light" multiple title="Seleccione
+                una o varios Departamentos" >
+                  @foreach ($specialties as $specialty)
+                  <option value="{{ $specialty->id }}">{{ $specialty->name }}</option>
+                  @endforeach
+                </select>
+              </div> 
             <button type="submit" class="btn btn-primary">
                 Guardar
             </button>
@@ -63,4 +75,15 @@
     </div>
     </div>
   </div>
+@endsection
+@section('scripts')
+@section('scripts')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js">
+</script>
+@endsection
+<script>
+  $(document).ready(() => {
+    $('#specialties').selectpicker('val',@jason($specialty_ids));
+  });
+</script>
 @endsection

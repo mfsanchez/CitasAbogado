@@ -5,18 +5,33 @@ namespace App\Http\Controllers\Doctor;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-use App\WordDay;
+use App\WorkDay;
+use Carbon\Carbon;
 
 
 class ScheduleController extends Controller
 {
+    private $days = [
+        'Lunes', 'Martes','Miercoles',
+        'Jueves','Viernes'
+    ];
+
     public function edit()
     {
-        $days = [
-            'Lunes', 'Martes','Miercoles',
-            'Jueves','Viernes'
-        ];
-        return view('schedule', compact('days'));
+        
+        $workDays = WorkDay::where('user_id',auth()->id())->get();
+        
+        $workDays->map(function($workDay){
+           
+            $workDay->morning_start = (new Carbon($workDay->morning_start))->format('g:i A');
+            $workDay->morning_end = (new Carbon($workDay->morning_end))->format('g:i A');
+
+
+            return $workDay;
+        });
+        //dd($workDays->toArray());
+        $days =$this->days;
+        return view('schedule', compact('workDays','days'));
     }
 
     public function store(Request $request)
@@ -26,7 +41,13 @@ class ScheduleController extends Controller
         $morning_end = $request->input('morning_end');
         
         
-       for ($i=0; $i<5; ++$i)
+       $errors = [];
+       for ($i=0; $i<5; ++$i){
+
+        if($morning_start[$i] > $morning_end[$i]){
+            $errors [] = ' Las horas del turno mañana son incosistentes para él dia ' . $this->days[$i]. '.';
+        }
+
        WorkDay::updateOrCreate(
             [
                 'day' => $i ,
@@ -39,6 +60,12 @@ class ScheduleController extends Controller
             ]
            
         );
-        return back();
+    }
+        if (count($errors) >0)
+        return back()->with(compact('errors'));
+
+        $notification = " Los cambios se han guardo correctamente. ";
+        return back()->with(compact('notification'));
+        
     }
 }

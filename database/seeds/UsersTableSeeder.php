@@ -26,7 +26,7 @@ class UsersTableSeeder extends Seeder
         ]);
 
         User::create([
-        'name' => 'Irina',
+        'name' => 'Funcianaria 1',
         'email' => 'irina@gmail.com',
         'email_verified_at' => now(),
         'password' => bcrypt('123123'), // password
@@ -36,7 +36,7 @@ class UsersTableSeeder extends Seeder
         'role'=> 'doctor'
         ]);
         User::create([
-            'name' => 'German',
+            'name' => 'Ciudadano 1',
             'email' => 'German@gmail.com',
             'email_verified_at' => now(),
             'password' => bcrypt('123123'), // password
@@ -47,6 +47,6 @@ class UsersTableSeeder extends Seeder
             ]);
 
 
-        factory(User::class, 50)->create();
+        factory(User::class, 10)->create();
     }
 }

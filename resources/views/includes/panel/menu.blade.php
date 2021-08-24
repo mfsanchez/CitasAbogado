@@ -46,12 +46,12 @@
   </li>
   @else {{-- patient --}}
   <li class="nav-item">
-    <a class="nav-link" href="./home">
+    <a class="nav-link" href="appointments/create">
       <i class="ni ni-send text-danger"></i> Reservar Cita
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="specialties">
+    <a class="nav-link" href="/apointments">
       <i class="ni ni-time-alarm text-primary"></i> Mis citas
     </a>
   </li>

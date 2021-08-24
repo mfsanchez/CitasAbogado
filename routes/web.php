@@ -27,5 +27,8 @@ Route::middleware(['auth', 'admin'])->namespace('Admin')->group(function () {
         Route::post('/schedule', 'ScheduleController@store');
         
 });
+     Route::get('/appointments/create', 'AppointmentController@create');
+     Route::post('/appointments', 'AppointmentController@store');
+     
 
 
