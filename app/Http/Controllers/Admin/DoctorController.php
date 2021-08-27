@@ -88,6 +88,7 @@ class DoctorController extends Controller
     {
         $doctor = User::doctors()->findOrFail($id);
         $specialties = Specialty::all();
+        
         $specialty_ids = $doctor->specialties()->pluck('specialties.id');
         return view('doctors.edit', compact('doctor','specialties','specialty_ids'));
     }

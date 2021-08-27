@@ -58,7 +58,7 @@ css/bootstrap-select.min.css">
             </div>
             <div class="form-group">
               <label for="specialties">Departamento</label>
-                <select name="sepecialties[]" id="specialties"  class="form-control selectpicker" data-style="btn-outline-secondary border border-light" multiple title="Seleccione
+                <select name="specialties[]" id="specialties"  class="form-control selectpicker" data-style="btn-outline-secondary border border-light" multiple title="Seleccione
                 una o varios Departamentos" >
                   @foreach ($specialties as $specialty)
                   <option value="{{ $specialty->id }}">{{ $specialty->name }}</option>

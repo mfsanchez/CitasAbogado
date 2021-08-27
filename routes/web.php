@@ -33,7 +33,10 @@ Route::middleware(['auth', 'admin'])->namespace('Admin')->group(function () {
          Route::post('/appointments', 'AppointmentController@store');
 
          //JSON
+         
          Route::get('/specialties/{specialty}/doctors','Api\SpecialtyController@doctors');
+         Route::get('/schedule/hours','Api\ScheduleController@hours');
+         
 
     });
 

@@ -59,10 +59,10 @@ css/bootstrap-select.min.css">
               <p>Ingrese un valor sólo si desea modificar la contraseña</p>
           </div>
           <div class="form-group">
-                <select name="sepecialties[]" id="specialties"  class="form-control selectpicker" data-style="btn-outline-secondary border border-light" multiple title="Seleccione
+                <select name="specialties[]" id="specialties"  class="form-control selectpicker" data-style="btn-outline-secondary border border-light" multiple title="Seleccione
                 una o varios Departamentos" >
                   @foreach ($specialties as $specialty)
-                  <option value="{{ $specialty->id }}">{{ $specialty->name }}</option>
+                   <option value="{{ $specialty->id }}">{{ $specialty->name }}</option>
                   @endforeach
                 </select>
               </div> 
@@ -77,13 +77,10 @@ css/bootstrap-select.min.css">
   </div>
 @endsection
 @section('scripts')
-@section('scripts')
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js">
-</script>
-@endsection
-<script>
-  $(document).ready(() => {
-    $('#specialties').selectpicker('val',@jason($specialty_ids));
-  });
-</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>
+  <script>
+    $(document).ready(() => {
+      $('#specialties').selectpicker('val', @json($specialty_ids));     
+    });    
+  </script>
 @endsection

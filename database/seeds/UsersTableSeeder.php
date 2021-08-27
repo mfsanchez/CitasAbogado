@@ -13,6 +13,7 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
+        //1
         User::create([
            
             'name' => 'Manuel Felipe',
@@ -26,8 +27,9 @@ class UsersTableSeeder extends Seeder
 
         ]);
 
+        //2
         User::create([
-        'name' => 'Funcianaria 1',
+        'name' => 'Funcianaria Test',
         'email' => 'irina@gmail.com',
         'email_verified_at' => now(),
         'password' => bcrypt('123123'), // password
@@ -36,8 +38,10 @@ class UsersTableSeeder extends Seeder
         'phone' =>'',
         'role'=> 'doctor'
         ]);
+        
+        //3
         User::create([
-            'name' => 'Ciudadano 1',
+            'name' => 'Ciudadano Test',
             'email' => 'German@gmail.com',
             'email_verified_at' => now(),
             'password' => bcrypt('123123'), // password

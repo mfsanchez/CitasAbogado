@@ -20,16 +20,23 @@ class ScheduleController extends Controller
     {
         
         $workDays = WorkDay::where('user_id',auth()->id())->get();
-        
-        $workDays->map(function($workDay){
+
+        if (count($workDays) > 0){
+            $workDays->map(function($workDay){
            
             $workDay->morning_start = (new Carbon($workDay->morning_start))->format('g:i A');
             $workDay->morning_end = (new Carbon($workDay->morning_end))->format('g:i A');
 
-
             return $workDay;
         });
-        //dd($workDays->toArray());
+    }else {
+        $workDays = collect();
+        for ($i=0; $i<5; ++$i)
+            $workDays->push(new WorkDay());
+    }
+        
+       
+        
         $days =$this->days;
         return view('schedule', compact('workDays','days'));
     }

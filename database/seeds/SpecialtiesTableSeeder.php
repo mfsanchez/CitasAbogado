@@ -25,7 +25,13 @@ class SpecialtiesTableSeeder extends Seeder
             $specialty = Specialty::create([
                 'name' => $specialtyName
             ]);
+            
+            $specialty->users()->saveMany(
+                factory(User::class, 3)->states('doctor')->make()
+            );
         }
+        // Médico Test
+        User::find(3)->specialties()->save($specialty);
        
     }
 }
