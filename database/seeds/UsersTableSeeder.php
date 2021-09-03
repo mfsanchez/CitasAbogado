@@ -16,8 +16,8 @@ class UsersTableSeeder extends Seeder
         //1
         User::create([
            
-            'name' => 'Manuel Felipe',
-            'email' => 'hola@gmail.com',
+            'name' => 'Administrador',
+            'email' => 'admin@gmail.com',
             'email_verified_at' => now(),
             'password' => bcrypt('123123'), // password
             'dni'=> '123456789',
@@ -29,8 +29,18 @@ class UsersTableSeeder extends Seeder
 
         //2
         User::create([
-        'name' => 'Funcianaria Test',
-        'email' => 'irina@gmail.com',
+        'name' => 'Abogado ',
+        'email' => 'abogado@gmail.com',
+        'email_verified_at' => now(),
+        'password' => bcrypt('123123'), // password
+        'dni'=> '123456789',
+        'address'=> '' ,
+        'phone' =>'',
+        'role'=> 'doctor'
+        ]);
+         User::create([
+        'name' => 'Padron',
+        'email' => 'padron@gmail.com',
         'email_verified_at' => now(),
         'password' => bcrypt('123123'), // password
         'dni'=> '123456789',
@@ -41,8 +51,8 @@ class UsersTableSeeder extends Seeder
         
         //3
         User::create([
-            'name' => 'Ciudadano Test',
-            'email' => 'German@gmail.com',
+            'name' => 'Ciudadano',
+            'email' => 'ciudadano@gmail.com',
             'email_verified_at' => now(),
             'password' => bcrypt('123123'), // password
             'dni'=> '123456789',
@@ -52,6 +62,6 @@ class UsersTableSeeder extends Seeder
             ]);
 
 
-        factory(User::class, 10)->create();
+        factory(User::class, 0)->create();
     }
 }

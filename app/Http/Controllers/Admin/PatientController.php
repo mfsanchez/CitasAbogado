@@ -28,7 +28,7 @@ class PatientController extends Controller
         $rules = [
             'name' => 'required|min:3',
             'email'=> 'required|email',
-            'dni' => 'nullable|digits:8',
+            'dni' => 'nullable',
             'address'=> 'nullable|min:5',
             'phone'=> 'nullable|min:6'
         ];
@@ -63,7 +63,7 @@ class PatientController extends Controller
         $rules = [
             'name' => 'required|min:3',
             'email'=> 'required|email',
-            'dni' => 'nullable|digits:8',
+            'dni' => 'nullable',
             'address'=> 'nullable|min:5',
             'phone'=> 'nullable|min:6'
         ];

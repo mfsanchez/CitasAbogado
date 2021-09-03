@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
             SpecialtiesTableSeeder::class,
             WorkDaysTableSeeder::class
             
+            
         ]);
     }
 }

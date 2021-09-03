@@ -14,12 +14,10 @@ class SpecialtiesTableSeeder extends Seeder
     public function run()
     {
         $specialties = [
-            'Registro',
+            
             'Padron',
-            'Certificado Digital',
             'Agobado',
-            'Sip',
-            'Adl'
+            
         ];
        foreach ($specialties as $specialtyName) {
             $specialty = Specialty::create([
@@ -27,11 +25,11 @@ class SpecialtiesTableSeeder extends Seeder
             ]);
             
             $specialty->users()->saveMany(
-                factory(User::class, 3)->states('doctor')->make()
+                factory(User::class, 2)->states('doctor')->make()
             );
         }
         // Médico Test
-        User::find(3)->specialties()->save($specialty);
+        User::find(2)->specialties()->save($specialty);
        
     }
 }

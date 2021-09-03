@@ -68,7 +68,17 @@
                 <label for="address">Hora de atención</label>
                 <div id ="hours">
                     @if ($intervals)
-                        @foreach ($)
+                        @foreach ($intervals['morning'] as $key => $interval)
+                        <div class="custom-control custom-radio mb-3">
+                            <input type="radio" name="scheduled_time" value="{{$interval['start']}}"
+                            class="custom-control-input" id="intervalMorning {{$key}}" required>
+                            <label class="custom-control-label" for="intervalMorning{{$key}}">
+                                {{$interval['start']}} - {{$interval['end']}}
+                            </label>
+                          <input name="scheduled_time" value="{{$interval->start}}" class="custom-control-input" id="intervalMorning{{$key}}" type="radio" required>
+                          <label class="custom-control-label" for="intervalMorning{{$key}}">{{$interval->start}} - {{$interval->end}}</label>
+                        </div>
+                        @endforeach
                     @else
                     <div class="alert alert-info" role="alert">
                     Selecciona un Departamento y una fecha para ver horas disponibles
@@ -84,12 +94,12 @@
                   <label class="custom-control-label" for="type1">Padron</label>
                 </div>
                 <div class="custom-control custom-radio mb-3">
-                  <input type="radio" id="type2" name="type" class="custom-control-input" type="radio" @if(old('type') == 'Registro') checked @endif value="Registro" >
-                  <label class="custom-control-label" for="type1">Registro</label>
+                  <input type="radio" id="type2" name="type" class="custom-control-input"  @if(old('type') == 'Registro') checked @endif value="Registro" >
+                  <label class="custom-control-label" for="type2">Registro</label>
                 </div>
                 <div class="custom-control custom-radio mb-3">
-                  <input type="radio" id="type3" name="type" class="custom-control-input" type="radio" @if(old('type') == 'Abogado') checked @endif value="Agobado" >
-                  <label class="custom-control-label" for="type1">Abogado</label>
+                  <input type="radio" id="type3" name="type" class="custom-control-input" @if(old('type') == 'Abogado') checked @endif value="Agobado" >
+                  <label class="custom-control-label" for="type3">Abogado</label>
                 </div>
             </div>      
             <button type="submit" class="btn btn-primary">
@@ -104,6 +114,6 @@
 @endsection
 @section('scripts')
 <script src="{{ asset('/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}"></script>
-<script src="{{ asset('/js/appointments/create.js')}}"></script>
+ <script src="{{ asset('/js/appointments/create.js') }}"></script>
 
 @endsection
