@@ -16,7 +16,7 @@ class SpecialtiesTableSeeder extends Seeder
         $specialties = [
             
             'Padron',
-            'Agobado',
+            'Justiprop',
             
         ];
        foreach ($specialties as $specialtyName) {
@@ -25,11 +25,11 @@ class SpecialtiesTableSeeder extends Seeder
             ]);
             
             $specialty->users()->saveMany(
-                factory(User::class, 2)->states('doctor')->make()
+                factory(User::class, 3)->states('doctor')->make()
             );
         }
         // Médico Test
-        User::find(2)->specialties()->save($specialty);
+        User::find(3)->specialties()->save($specialty);
        
     }
 }

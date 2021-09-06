@@ -1,0 +1,154 @@
+[debug] [2021-09-03T08:29:17.712Z] ----------------------------------------------------------------------
+[debug] [2021-09-03T08:29:17.714Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Manuel\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-09-03T08:29:17.714Z] CLI Version:   9.17.0
+[debug] [2021-09-03T08:29:17.715Z] Platform:      win32
+[debug] [2021-09-03T08:29:17.715Z] Node Version:  v15.3.0
+[debug] [2021-09-03T08:29:17.716Z] Time:          Fri Sep 03 2021 10:29:17 GMT+0200 (hora de verano de Europa central)
+[debug] [2021-09-03T08:29:17.716Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-09-03T08:29:17.723Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-09-03T08:29:17.724Z] > authorizing via signed-in user (informaticaguardamar@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\laragon\www\CitasAbogado
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2021-09-03T08:30:10.011Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2021-09-03T08:30:10.377Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2021-09-03T08:30:10.377Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project citasayuntamiento-46b30 (citasayuntamiento) 
+[info] 
+=== Hosting:github Setup
+[info] 
+[info] i  Detected a .git folder at C:\laragon\www\CitasAbogado 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=309211708&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-09-03T08:30:19.865Z] >>> HTTP REQUEST POST https://github.com/login/oauth/access_token  
+ {"client_id":"89cf50f02ac6aaed3484","client_secret":"3330d14abc895d9a74d5f17cd7a00711fa2c5bf0","code":"9e09bd344a421ce5f058","redirect_uri":"http://localhost:9005","state":"309211708"}
+[debug] [2021-09-03T08:30:20.188Z] <<< HTTP RESPONSE 200 {"server":"GitHub.com","date":"Fri, 03 Sep 2021 08:30:20 GMT","content-type":"application/json; charset=utf-8","transfer-encoding":"chunked","vary":"X-PJAX, X-PJAX-Container, Accept-Encoding, Accept, X-Requested-With","permissions-policy":"interest-cohort=()","etag":"W/\"177bd8b3cb1a9fa9d504baaf3fe4521e\"","cache-control":"max-age=0, private, must-revalidate","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-frame-options":"deny","x-content-type-options":"nosniff","x-xss-protection":"0","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","expect-ct":"max-age=2592000, report-uri=\"https://api.github.com/_private/browser/errors\"","content-security-policy":"default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events translator.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com viewscreen.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com secured-user-images.githubusercontent.com/ *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker-b05e50fc.js gist.github.com/socket-worker-b05e50fc.js","x-github-request-id":"CFC8:F133:35D029:392C3F:6131DD1C"}
+[debug] [2021-09-03T08:30:20.193Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2021-09-03T08:30:20.525Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2021-09-03T08:30:20.526Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"mfsanchez","id":60473682,"node_id":"MDQ6VXNlcjYwNDczNjgy","avatar_url":"https://avatars.githubusercontent.com/u/60473682?v=4","gravatar_id":"","url":"https://api.github.com/users/mfsanchez","html_url":"https://github.com/mfsanchez","followers_url":"https://api.github.com/users/mfsanchez/followers","following_url":"https://api.github.com/users/mfsanchez/following{/other_user}","gists_url":"https://api.github.com/users/mfsanchez/gists{/gist_id}","starred_url":"https://api.github.com/users/mfsanchez/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/mfsanchez/subscriptions","organizations_url":"https://api.github.com/users/mfsanchez/orgs","repos_url":"https://api.github.com/users/mfsanchez/repos","events_url":"https://api.github.com/users/mfsanchez/events{/privacy}","received_events_url":"https://api.github.com/users/mfsanchez/received_events","type":"User","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":8,"public_gists":0,"followers":0,"following":0,"created_at":"2020-01-30T13:38:38Z","updated_at":"2021-07-03T05:05:31Z","private_gists":0,"total_private_repos":0,"owned_private_repos":0,"disk_usage":3970,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as mfsanchez 
+[info] 
+[debug] [2021-09-03T08:31:02.404Z] >>> [apiv2][query] GET https://api.github.com/repos/user/repository/actions/secrets/public-key type=owner
+[debug] [2021-09-03T08:31:02.706Z] <<< [apiv2][status] GET https://api.github.com/repos/user/repository/actions/secrets/public-key 404
+[debug] [2021-09-03T08:31:02.707Z] <<< [apiv2][body] GET https://api.github.com/repos/user/repository/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2021-09-03T08:31:07.883Z] >>> [apiv2][query] GET https://api.github.com/repos/no/actions/secrets/public-key type=owner
+[debug] [2021-09-03T08:31:08.167Z] <<< [apiv2][status] GET https://api.github.com/repos/no/actions/secrets/public-key 404
+[debug] [2021-09-03T08:31:08.168Z] <<< [apiv2][body] GET https://api.github.com/repos/no/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2021-09-03T08:31:26.763Z] >>> [apiv2][query] GET https://api.github.com/repos/user/actions/secrets/public-key type=owner
+[debug] [2021-09-03T08:31:27.037Z] <<< [apiv2][status] GET https://api.github.com/repos/user/actions/secrets/public-key 404
+[debug] [2021-09-03T08:31:27.037Z] <<< [apiv2][body] GET https://api.github.com/repos/user/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2021-09-03T08:31:29.380Z] >>> [apiv2][query] GET https://api.github.com/repos/mfsanchez/actions/secrets/public-key type=owner
+[debug] [2021-09-03T08:31:29.658Z] <<< [apiv2][status] GET https://api.github.com/repos/mfsanchez/actions/secrets/public-key 404
+[debug] [2021-09-03T08:31:29.659Z] <<< [apiv2][body] GET https://api.github.com/repos/mfsanchez/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2021-09-03T08:31:36.302Z] >>> [apiv2][query] GET https://api.github.com/repos/mfsanchez/citasabogado/actions/secrets/public-key type=owner
+[debug] [2021-09-03T08:31:36.627Z] <<< [apiv2][status] GET https://api.github.com/repos/mfsanchez/citasabogado/actions/secrets/public-key 200
+[debug] [2021-09-03T08:31:36.627Z] <<< [apiv2][body] GET https://api.github.com/repos/mfsanchez/citasabogado/actions/secrets/public-key {"key_id":"568250167242549743","key":"ohHLWhHhFTjqUOM5SgeqYI52QhC53dkJISYUgB6AtnU="}
+[debug] [2021-09-03T08:31:36.630Z] >>> [apiv2][query] GET https://api.github.com/repos/mfsanchez/citasabogado [none]
+[debug] [2021-09-03T08:31:36.938Z] <<< [apiv2][status] GET https://api.github.com/repos/mfsanchez/citasabogado 200
+[debug] [2021-09-03T08:31:36.938Z] <<< [apiv2][body] GET https://api.github.com/repos/mfsanchez/citasabogado {"id":398025559,"node_id":"MDEwOlJlcG9zaXRvcnkzOTgwMjU1NTk=","name":"CitasAbogado","full_name":"mfsanchez/CitasAbogado","private":false,"owner":{"login":"mfsanchez","id":60473682,"node_id":"MDQ6VXNlcjYwNDczNjgy","avatar_url":"https://avatars.githubusercontent.com/u/60473682?v=4","gravatar_id":"","url":"https://api.github.com/users/mfsanchez","html_url":"https://github.com/mfsanchez","followers_url":"https://api.github.com/users/mfsanchez/followers","following_url":"https://api.github.com/users/mfsanchez/following{/other_user}","gists_url":"https://api.github.com/users/mfsanchez/gists{/gist_id}","starred_url":"https://api.github.com/users/mfsanchez/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/mfsanchez/subscriptions","organizations_url":"https://api.github.com/users/mfsanchez/orgs","repos_url":"https://api.github.com/users/mfsanchez/repos","events_url":"https://api.github.com/users/mfsanchez/events{/privacy}","received_events_url":"https://api.github.com/users/mfsanchez/received_events","type":"User","site_admin":false},"html_url":"https://github.com/mfsanchez/CitasAbogado","description":null,"fork":false,"url":"https://api.github.com/repos/mfsanchez/CitasAbogado","forks_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/forks","keys_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/keys{/key_id}","collaborators_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/teams","hooks_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/hooks","issue_events_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/issues/events{/number}","events_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/events","assignees_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/assignees{/user}","branches_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/branches{/branch}","tags_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/tags","blobs_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/git/refs{/sha}","trees_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/git/trees{/sha}","statuses_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/statuses/{sha}","languages_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/languages","stargazers_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/stargazers","contributors_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/contributors","subscribers_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/subscribers","subscription_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/subscription","commits_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/commits{/sha}","git_commits_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/git/commits{/sha}","comments_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/comments{/number}","issue_comment_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/issues/comments{/number}","contents_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/contents/{+path}","compare_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/compare/{base}...{head}","merges_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/merges","archive_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/downloads","issues_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/issues{/number}","pulls_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/pulls{/number}","milestones_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/milestones{/number}","notifications_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/labels{/name}","releases_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/releases{/id}","deployments_url":"https://api.github.com/repos/mfsanchez/CitasAbogado/deployments","created_at":"2021-08-19T17:35:50Z","updated_at":"2021-08-21T07:32:36Z","pushed_at":"2021-09-03T06:55:46Z","git_url":"git://github.com/mfsanchez/CitasAbogado.git","ssh_url":"git@github.com:mfsanchez/CitasAbogado.git","clone_url":"https://github.com/mfsanchez/CitasAbogado.git","svn_url":"https://github.com/mfsanchez/CitasAbogado","homepage":null,"size":3955,"stargazers_count":0,"watchers_count":0,"language":"PHP","has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":1,"license":null,"forks":0,"open_issues":1,"watchers":0,"default_branch":"master","permissions":{"admin":true,"maintain":true,"push":true,"triage":true,"pull":true},"temp_clone_token":"","allow_squash_merge":true,"allow_merge_commit":true,"allow_rebase_merge":true,"allow_auto_merge":false,"delete_branch_on_merge":false,"network_count":0,"subscribers_count":1}
+[debug] [2021-09-03T08:31:36.942Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-09-03T08:31:36.942Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-09-03T08:31:37.117Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Fri, 03 Sep 2021 08:31:37 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-03T08:31:37.134Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/citasayuntamiento-46b30/serviceAccounts  
+ {"accountId":"github-action-398025559","serviceAccount":{"displayName":"GitHub Actions (mfsanchez/citasabogado)","description":"A service account with permission to deploy to Firebase Hosting for the GitHub repository mfsanchez/citasabogado"}}
+[debug] [2021-09-03T08:31:38.316Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 03 Sep 2021 08:31:38 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-03T08:31:38.318Z] >>> HTTP REQUEST GET https://iam.googleapis.com/v1/projects/citasayuntamiento-46b30/serviceAccounts/github-action-398025559@citasayuntamiento-46b30.iam.gserviceaccount.com  
+ 
+[debug] [2021-09-03T08:31:38.319Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/citasayuntamiento-46b30:getIamPolicy  
+ 
+[debug] [2021-09-03T08:31:38.943Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 03 Sep 2021 08:31:38 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-03T08:31:39.146Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 03 Sep 2021 08:31:39 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=683","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-03T08:31:39.148Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/citasayuntamiento-46b30:setIamPolicy  
+ {"policy":{"version":1,"etag":"BwXLEvX+2iA=","bindings":[{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:firebase-service-account@firebase-sa-management.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-l3vuh@citasayuntamiento-46b30.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-815469507769@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-l3vuh@citasayuntamiento-46b30.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:informaticaguardamar@gmail.com"]},{"role":"roles/pubsub.serviceAgent","members":["serviceAccount:service-815469507769@gcp-sa-pubsub.iam.gserviceaccount.com"]},{"role":"roles/firebaseauth.admin","members":["serviceAccount:github-action-398025559@citasayuntamiento-46b30.iam.gserviceaccount.com"]},{"role":"roles/serviceusage.apiKeysViewer","members":["serviceAccount:github-action-398025559@citasayuntamiento-46b30.iam.gserviceaccount.com"]},{"role":"roles/firebasehosting.admin","members":["serviceAccount:github-action-398025559@citasayuntamiento-46b30.iam.gserviceaccount.com"]},{"role":"roles/run.viewer","members":["serviceAccount:github-action-398025559@citasayuntamiento-46b30.iam.gserviceaccount.com"]}]},"updateMask":"bindings"}
+[debug] [2021-09-03T08:31:40.355Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 03 Sep 2021 08:31:40 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1108","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-03T08:31:40.356Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/citasayuntamiento-46b30/serviceAccounts/github-action-398025559@citasayuntamiento-46b30.iam.gserviceaccount.com/keys  
+ {"keyAlgorithm":"KEY_ALG_UNSPECIFIED","privateKeyType":"TYPE_GOOGLE_CREDENTIALS_FILE"}
+[debug] [2021-09-03T08:31:40.905Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 03 Sep 2021 08:31:40 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] +  Created service account github-action-398025559 with Firebase Hosting admin permissions. 
+[debug] [2021-09-03T08:31:40.936Z] >>> [apiv2][query] PUT https://api.github.com/repos/mfsanchez/citasabogado/actions/secrets/FIREBASE_SERVICE_ACCOUNT_CITASAYUNTAMIENTO_46B30 [none]
+[debug] [2021-09-03T08:31:40.937Z] >>> [apiv2][body] PUT https://api.github.com/repos/mfsanchez/citasabogado/actions/secrets/FIREBASE_SERVICE_ACCOUNT_CITASAYUNTAMIENTO_46B30 {"encrypted_value":"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","key_id":"568250167242549743"}
+[debug] [2021-09-03T08:31:41.370Z] <<< [apiv2][status] PUT https://api.github.com/repos/mfsanchez/citasabogado/actions/secrets/FIREBASE_SERVICE_ACCOUNT_CITASAYUNTAMIENTO_46B30 201
+[debug] [2021-09-03T08:31:41.370Z] <<< [apiv2][body] PUT https://api.github.com/repos/mfsanchez/citasabogado/actions/secrets/FIREBASE_SERVICE_ACCOUNT_CITASAYUNTAMIENTO_46B30 {}
+[info] +  Uploaded service account JSON to GitHub as secret FIREBASE_SERVICE_ACCOUNT_CITASAYUNTAMIENTO_46B30. 
+[info] i  You can manage your secrets at https://github.com/mfsanchez/citasabogado/settings/secrets. 
+[info] 
+[debug] [2021-09-03T08:31:41.787Z] TypeError: Cannot read property 'predeploy' of undefined
+    at Object.initGitHub [as hosting:github] (C:\Users\Manuel\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\hosting\github.js:65:30)
+    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+    at async init (C:\Users\Manuel\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:19:9)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2021-09-03T08:31:49.074Z] ----------------------------------------------------------------------
+[debug] [2021-09-03T08:31:49.076Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Manuel\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-09-03T08:31:49.077Z] CLI Version:   9.17.0
+[debug] [2021-09-03T08:31:49.077Z] Platform:      win32
+[debug] [2021-09-03T08:31:49.077Z] Node Version:  v15.3.0
+[debug] [2021-09-03T08:31:49.078Z] Time:          Fri Sep 03 2021 10:31:49 GMT+0200 (hora de verano de Europa central)
+[debug] [2021-09-03T08:31:49.078Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-09-03T08:31:49.086Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-09-03T08:31:49.086Z] > authorizing via signed-in user (informaticaguardamar@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\laragon\www\CitasAbogado
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2021-09-03T08:32:00.779Z] > refreshing access token with scopes: []
+[debug] [2021-09-03T08:32:00.780Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-09-03T08:32:00.935Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Fri, 03 Sep 2021 08:32:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-03T08:32:00.956Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2021-09-03T08:32:01.287Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2021-09-03T08:32:01.288Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project citasayuntamiento-46b30 (citasayuntamiento) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 

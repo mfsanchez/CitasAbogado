@@ -25,9 +25,9 @@
                 {{$appointment->specialty->name}}
                 </td>
                 @if ($role == 'patient')
-                <td>{{$appointment->doctor->name}}</td>
-                @elseif ($role == 'doctor')
                 <td>{{$appointment->patient->name}}</td>
+                @elseif ($role == 'doctor')
+                <td>{{$appointment->doctor->name}}</td>
                 @endif
                 <td>
                     {{$appointment->scheduled_date}}

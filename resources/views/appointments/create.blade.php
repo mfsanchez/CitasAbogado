@@ -28,10 +28,7 @@
 
         <form action="{{ url('appointments') }}" method="post">
             @csrf
-            <div class="form-group">
-                <label for="description">Descripción</label>
-                <input type="text" class="form-control" value="{{ old('description') }}" placeholder="Describe brevemente la consulta" name="description" id="description" required>
-            </div>
+            
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="specialty">Departamento</label>
@@ -50,6 +47,10 @@
                     @endforeach
                     </select>  
                 </div>
+            </div>
+            <div class="form-group">
+                <label for="description">Descripción</label>
+                <input type="text" class="form-control" value="{{ old('description') }}" placeholder="Describe brevemente la consulta" name="description" id="description" required>
             </div>
             <div class="form-group">
                 <label for="dni">Fecha</label>
@@ -99,7 +100,7 @@
                 </div>
                 <div class="custom-control custom-radio mb-3">
                   <input type="radio" id="type3" name="type" class="custom-control-input" @if(old('type') == 'Abogado') checked @endif value="Agobado" >
-                  <label class="custom-control-label" for="type3">Abogado</label>
+                  <label class="custom-control-label" for="type3">JustiPro</label>
                 </div>
             </div>      
             <button type="submit" class="btn btn-primary">
